@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app -capable" content="yes">
+  <meta name="apple-mobile-web-app -status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>5.23教材帮活动</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="win">
+  <div class="win-img">
+    <p>恭喜你！成功获得</p>
+    <h2>教材帮图书</h2>
+    <img src="./images/u19.png">
+  </div>
+  <div class="mod-table">
+    <form name="form1" method="post" id="form" action="" class="f1-form">
+      <ul class="ul-c2 ul-c1 J_formItem">
+        <li>
+          <p>选择类别：</p>
+          <div>
+            <label>
+              <input type="radio" name="subject" value="单选" id="RadioGroup1_0">文科</label>
+            <label>
+              <input type="radio" name="subject" value="单选" id="RadioGroup1_1">理科</label>
+          </div>
+        </li>
+        <li>
+          <label for="selectAddress">选择地区：</label>
+          <select name="selectAddress" id="selectAddress">
+            <option value="1">河南</option>
+            <option value="1">河北</option>
+            <option value="1">山东</option>
+          </select></li>
+        <li>
+          <p><label for="address">邮寄地址：</label></p>
+          <textarea name="address" id="address">dsd</textarea></li>
+        <li>
+          <label for="consignee">收货人：</label>
+          <input name="consignee" type="text" id="consignee" value="收货人">
+        </li>
+        <li>
+          <label for="phoneNumber">联系电话：</label>
+          <input name="phoneNumber" type="text" id="phoneNumber" value="1928239232">
+        </li>
+        <li>
+          <div class="f1-but">
+            <button id="J_submit" type="submit" class="bt-1">领取奖品</button>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+<script charset="utf-8" type="text/javascript" src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(function () {
+		$.bigWheel.writeUserInfo()
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app -capable" content="yes">
+  <meta name="apple-mobile-web-app -status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>5.23教材帮活动</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header class="header"><img width="100%" src="./images/head-pic.jpg"></header>
+
+<div class="page-content">
+
+  <!--活动首页-->
+  <div class="lottery-box" id="J_tabIndex">
+
+    <!--大转盘 st-->
+    <div class="lottery-content">
+      <div class="turnplate" style="background-image:url(./images/turnplate-bg.png);background-size:100% 100%;">
+        <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+        <img class="pointer" id="J_pointer" src="./images/turnplate-pointer.png">
+      </div>
+      <p style="text-align: center;display:none" id="J_residueDegree">剩余次数：0</p>
+
+    </div>
+
+    <!--大转盘 ed-->
+    <div class="f1-title">
+      <div class="grid-c2-l" id="J_active_intro" style="float: none;">
+        <a href="window3.html">
+          <img src="./images/title3.jpg">
+        </a>
+      </div>
+      <div class="f1-ins">
+        提示：12：00至13:00
+        <br>
+        18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！
+      </div>
+    </div>
+    <!--活动说明+增加抽奖次数 ed-->
+  </div>
+
+  <!--中奖记录-->
+  <div class="win" id="J_historyList" style="display: none;">
+    <h1>&nbsp;</h1>
+    <div class="mod-table">
+      <ul class="ul-c2">
+        <li class="title-li bgcolor-li">我的奖品</li>
+        <li class="title-li"><span class="li-time">手机尾号</span><span class="li-time">中奖时间</span> <span class="li-spanr">中奖内容</span>
+        </li>
+        <li><span class="li-time">05-11</span><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li class="title-li bgcolor-li">我的奖品</li>
+        <li class="title-li"><span class="li-time">手机尾号</span><span class="li-time">中奖时间</span> <span class="li-spanr">中奖内容</span>
+        </li>
+
+        <li><span class="li-time">05-11</span><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
+      </ul>
+    </div>
+  </div><!--抽奖记录ed-->
+</div>
+
+<div class="footer-box" id="page_tab">
+  <div class="f1-c2 current" data-target="#J_tabIndex">活动首页</div>
+  <div class="f1-c2" data-target="#J_historyList">中奖记录</div>
+</div>
+
+<div class="blank20"></div>
+
+<!--=========弹出框=========-->
+
+<!--中奖提示 st-->
+<div class="prize-tips" style="display: none;" id="J_resultAlert">
+  <div class="md-modal" style="text-align:center; line-height:25px;">
+    <!--老用户提示1 -->
+    <div class="md-content">
+      <div class="blank10"></div>
+      <h4 class="md-title">恭喜您，获得华为手环一个。</h4>
+      <div class="blank50">
+        <a href="javascript:" class="bt-1 writeInfo">立即领取</a>
+      </div>
+      <div>
+        <a href="javascript:void(0);" class="bt-1 pop-sec" id="retHref">喊小伙伴们来抽奖</a>
+      </div>
+      <p>每日首次分享成功，赠送3次抽奖机会。</p>
+      <div class="blank10"></div>
+      <a href="javascript:void(0);" class="close-box">×</a>
+    </div>
+  </div>
+  <div class="md-overlay"></div>
+</div>
+<!--中奖提示 ed-->
+
+
+<!--活动说明 st-->
+<div class="prize-tips" style="display: none;">
+  <div class="md-modal">
+    <div class="md-content">
+      <div class="blank10"></div>
+      <h4 class="md-title">活动说明</h4>
+      <p>
+        1. 关注教材帮，回复“教材帮”即可免费参加抽奖。
+        <br>
+        <br>
+        2. 活动期间，每位帮友每天均又一次抽奖机会，当日可通过分享朋友圈，增加抽奖机会。
+        <br>
+        <br>
+        3. 中奖后请仔细填写您的个人信息，届时会在微信公众平台上公布获奖名单。信息确认一周后，奖品将以快递形式飞向你！收到奖品请戳图、晒照，放肆炫耀人品。
+        <br>
+        <br>
+        4. 此次活动免费参见，如有陌生电话、短信、冒充天星教育或教材帮编辑部的工作人员向您收取任何费用，请勿相信。
+        <br>
+        <br>
+        5. 本次活动的最终解释权归河南天星教育传媒股份有限公司所有。
+      </p>
+      <div class="blank10"></div>
+      <a href="javascript:void(0);" class="close-box">×</a>
+    </div>
+  </div>
+  <div class="md-overlay"></div>
+</div>
+<!--活动说明 ed-->
+
+<!--增加抽奖次数-->
+<div class="prize-tips" style="display: none;">
+  <div class="md-modal">
+    <div class="md-content">
+      <div class="blank10"></div>
+      <h4 class="md-title">增加抽奖次数</h4>
+      <p> 分享朋友圈，增加一次抽奖机会。</p>
+      <div class="blank10"></div>
+      <a href="javascript:void(0);" class="close-box">×</a>
+    </div>
+  </div>
+  <div class="md-overlay"></div>
+</div>
+<!--增加抽奖次数end-->
+
+<!--=========弹出框end=========-->
+
+<script charset="utf-8" type="text/javascript" src="js/jquery.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+<script charset="utf-8" type="text/javascript" src="js/jQueryRotate.js"></script>
+<script src="js/index.js"></script>
+<script>
+  var prizeList = ["未中奖", "华为手环一个", "ipadmini一台", "价值50元的天星图书", "iPhone一台", "微信现金红包一个"];
+	$(function () {
+		$.bigWheel.index()
+	})
+</script>
+</body>
+</html>
