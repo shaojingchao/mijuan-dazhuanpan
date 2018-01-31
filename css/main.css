@@ -82,6 +82,9 @@ a:hover {
   min-width: 320px;
   vertical-align: bottom;
 }
+.page-content{
+  background: url(../images/) 0 0 no-repeat;
+  }
 
 /* 转盘抽奖模块 */
 .lottery-box {
