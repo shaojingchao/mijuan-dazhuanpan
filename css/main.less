@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Microsoft yahei", 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background: #e64102;
+  position: relative;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: #f9c67f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  width: 5em;
+  padding: 0.7em 3em;
+  margin: 0 0.2em;
+  text-align: center;
+  background-color: #ecd10e;
+  color: #f00;
+  line-height: 1;
+  font-size: 15px;
+  border-radius: 50px;
+}
+
+.red {
+  color: red;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  background: #fff url(../images/loading.gif) center center/300px 210px no-repeat;
+  background-color: #ffc322;
+}
+
+.page-content {
+
+}
+
+.index-content {
+  background: #e64102 url(../images/top_bg_01.jpg) 50% 0 no-repeat;
+  background-size: 100% auto;
+  padding-top: 169px;
+  padding-top: 45vw;
+}
+
+/* 大转盘 */
+.lottery-box {
+  max-width: 1080px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 15px 0 50px 0;
+  overflow: hidden;
+}
+
+.lottery-content {
+  text-align: center;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  .today-times {
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    span {
+      font-size: 1.1em;
+      color: #fedb03;
+      margin: 0 0.3em;
+    }
+  }
+  .weidian-link-btn {
+    margin: 10px auto 0;
+    display: block;
+    width: 230px;
+    height: 40px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.lottery-content .turnplate {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  padding: 12px;
+  box-sizing: border-box;
+  background: url(../images/wheel_wrap.png) no-repeat 0 0 ~"/" 100% 100%;
+}
+
+.lottery-content .turnplate canvas.item {
+  display: block;
+  width: 100%;
+}
+
+.lottery-content .turnplate img.pointer {
+  position: absolute;
+  width: 32.5%;
+  left: 34.1%;
+  top: 22.1%;
+}
+
+/*活动说明*/
+.activity-desc {
+  margin: 0 15px;
+  color: #fff;
+  line-height: 2;
+  background-color: #f4631f;
+  padding: 5px 15px 40px;
+  border-radius: 3px;
+  .title {
+    width: 240px;
+    height: 30px;
+    margin: 5px auto;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+/*中奖记录*/
+.prize-list {
+  padding: 50px 15px 100px;
+  margin-bottom: 40px;
+  background: #e64102;
+}
+
+.prize-list h1 {
+  text-align: center;
+  img {
+    max-width: 300px;
+  }
+}
+
+.prize-table {
+  margin-top: 15px;
+  background: #ee6b02;
+  border-radius: 5px;
+  overflow: hidden;
+  li {
+    line-height: 40px;
+    border-top: 1px solid #e64102;
+    color: #fff;
+    overflow: hidden;
+    &:first-child {
+      border-top: none;
+    }
+    span {
+      float: left;
+      display: block;
+      width: 33.33%;
+      text-align: center;
+      &.item-2 {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+  }
+}
+
+/*tabs*/
+.footer-box {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, .1);
+  .tab-item {
+    width: 50%;
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 2.4em;
+    text-align: center;
+    color: #cf2407;
+    background: #e48e08;
+    opacity: 0.85;
+    &.active {
+      color: #cf2407;
+      background: #fccd02;
+    }
+  }
+}
+
+//弹框提示信息
+/*弹窗*/
+#layer-box {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prize_dialog {
+  position: absolute;
+  padding: 30px 0;
+  left: 0;
+  top: 30px;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  .dialog-content {
+    position: relative;
+    padding: 40px 20px 30px;
+    max-width: 280px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: url(../prize/images/prizebg.png) no-repeat center #f64603;
+    background-size: cover;
+    border-radius: 3px;
+    .title-msg {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+    }
+    .awards-tips {
+      font-size: 12px;
+      text-align: center;
+      color: #ffcb01;
+      padding: 30px 0 10px;
+    }
+    /*提示语*/
+    .tips-content {
+      text-align: center;
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .btns {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .dialog-img {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin: 20px auto;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      width: 120%;
+      height: 40px;
+      border-radius: 50%;
+      margin-left: -10%;
+      background-color: #feffd0;
+    }
+    &.prize-img {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .times-tips {
+    color: #e0d300;
+    text-align: center;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background: url(../images/close-btn.png) 50% 50%/100% 100% no-repeat;
+    font-size: 24px;
+    &:active {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+}
+
+//表单
+.form-list {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin: 0 -20px;
+  .form-control {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f0ebe9;
+    border: 1px solid #f0ebe9;
+    border-radius: 4px;
+    padding: 0.5em;
+  }
+  select.form-control {
+    height: 36px;
+    padding-top: 0;
+    padding-bottom: 0.1em;
+  }
+  .top-tips {
+    font-size: 12px;
+    color: #bab1b1;
+  }
+  .form-item {
+    padding: 5px 0;
+  }
+  .custom-radio {
+    display: inline-block;
+    position: relative;
+    input[type=radio] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      margin: 0;
+      height: 0;
+      opacity: 0;
+    }
+    span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      vertical-align: -3px;
+      border-radius: 50%;
+      background-color: #f0ebe9;
+      padding: 4px;
+    }
+    input[type=radio]:checked + span {
+      &:after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: #e64102;
+        border-radius: 50%;
+      }
+    }
+  }
+}

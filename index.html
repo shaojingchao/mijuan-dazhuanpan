@@ -7,163 +7,254 @@
   <meta name="apple-mobile-web-app -capable" content="yes">
   <meta name="apple-mobile-web-app -status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
-  <title>5.23教材帮活动</title>
+  <title></title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+<div id="loading"></div>
 
-<!--<header class="header"><img width="100%" src="./images/head-pic.jpg"></header>-->
-
+<div id="layer-box" style="display: none"></div>
+<!--活动首页-->
 <div class="page-content">
+  <div class="index-content" id="J_tabIndex">
+    <div class="lottery-box">
 
-  <!--活动首页-->
-  <div class="lottery-box" id="J_tabIndex">
-
-    <!--大转盘 st-->
-    <div class="lottery-content">
-      <div class="turnplate" style="background-image:url(./images/turnplate-bg.png);background-size:100% 100%;">
-        <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
-        <img class="pointer" id="J_pointer" src="./images/turnplate-pointer.png">
-      </div>
-      <p style="text-align: center;display:none" id="J_residueDegree">剩余次数：0</p>
-
-    </div>
-
-    <!--大转盘 ed-->
-    <div class="f1-title">
-      <div class="grid-c2-l" id="J_active_intro" style="float: none;">
-        <a href="window3.html">
-          <img src="./images/title3.jpg">
+      <!--大转盘 st-->
+      <div class="lottery-content">
+        <div class="turnplate">
+          <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+          <img class="pointer" id="J_pointer" src="./images/start_btn.png">
+        </div>
+        <p class="today-times" id="J_residueDegree">今日还有<span class="J_times">-</span>次抽奖机会</p>
+        <a class="weidian-link-btn" href="https://login.youzan.com/sso/index">
+          <img src="./images/weidian_btn.png" alt="">
         </a>
       </div>
-      <div class="f1-ins">
-        提示：12：00至13:00
-        <br>
-        18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！18:00至19:00中奖率更高！
+
+      <!--活动说明+增加抽奖次数 ed-->
+
+      <div class="activity-desc">
+        <h3 class="title">
+          <img src="./images/active_title.png">
+        </h3>
+        <p>
+          1.活动时间：2018.2.15-2.21<br>
+          2.活动奖品：<br>
+          一等奖：现金红包500元 <br>
+          二等奖：价值298元押题密卷一套<br>
+          三等奖：押题密卷100元代金券<br>
+          四等奖：押题密卷50元代金券<br>
+          五等奖：押题密卷20元代金券<br>
+          六等奖：押题密卷10元代金券<br>
+          3.兑奖说明：<br>
+          a.活动用户每日有3次抽奖机会。 <br>
+          b.中奖的用户请按照提示完成个人信息填写。请保证参
+          加本次活动是提交的个人信息真实、准确、有效，如因
+          信息有误导致奖品无法发送，我方视为用户放弃奖品。
+          c.代金券不可转赠他人，不能叠加使用。<br>
+        </p>
       </div>
     </div>
-    <!--活动说明+增加抽奖次数 ed-->
   </div>
 
   <!--中奖记录-->
-  <div class="win" id="J_historyList" style="display: none;">
-    <h1>&nbsp;</h1>
-    <div class="mod-table">
-      <ul class="ul-c2">
-        <li class="title-li bgcolor-li">我的奖品</li>
-        <li class="title-li"><span class="li-time">手机尾号</span><span class="li-time">中奖时间</span> <span class="li-spanr">中奖内容</span>
-        </li>
-        <li><span class="li-time">05-11</span><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li class="title-li bgcolor-li">我的奖品</li>
-        <li class="title-li"><span class="li-time">手机尾号</span><span class="li-time">中奖时间</span> <span class="li-spanr">中奖内容</span>
-        </li>
+  <div class="prize-list" id="J_historyList" style="display: none;">
+    <h1><img src="./images/zjjl_title.png" alt=""></h1>
+    <ul class="prize-table">
+      <li><span class="item-1">随风而去</span><span class="item-2">2018-01-11</span><span class="item-3">10元代金券</span></li>
+      <li><span class="item-1">随风而去</span><span class="item-2">2018-01-11</span><span class="item-3">10元代金券</span></li>
+      <li><span class="item-1">随风而去</span><span class="item-2">2018-01-11</span><span class="item-3">10元代金券</span></li>
+      <li><span class="item-1">随风而去</span><span class="item-2">2018-01-11</span><span class="item-3">10元代金券</span></li>
+    </ul>
+  </div>
 
-        <li><span class="li-time">05-11</span><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-        <li><span class="li-time">05-11</span> <span class="li-spanr">5M流量</span></li>
-      </ul>
-    </div>
-  </div><!--抽奖记录ed-->
 </div>
 
-<div class="footer-box" id="page_tab">
-  <div class="f1-c2 current" data-target="#J_tabIndex">活动首页</div>
-  <div class="f1-c2" data-target="#J_historyList">中奖记录</div>
+<div class="footer-box" id="page_tab" data-current="active">
+  <div class="tab-item active" data-target="#J_tabIndex">活动首页</div>
+  <div class="tab-item" data-target="#J_historyList">获奖记录</div>
 </div>
 
-<div class="blank20"></div>
-
-<!--=========弹出框=========-->
-
-<!--中奖提示 st-->
-<div class="prize-tips" style="display: none;" id="J_resultAlert">
-  <div class="md-modal" style="text-align:center; line-height:25px;">
-    <!--老用户提示1 -->
-    <div class="md-content">
-      <div class="blank10"></div>
-      <h4 class="md-title">恭喜您，获得华为手环一个。</h4>
-      <div class="blank50">
-        <a href="javascript:" class="bt-1 writeInfo">立即领取</a>
+<!--弹窗-->
+<script type="text/html" id="tpl_modal">
+  <div class="mod-cover prize_dialog">
+    <div class="dialog-content">
+      <a href="javascript:" class="close-btn">×</a>
+      <h1 class="title-msg">{{data.msg}}</h1>
+      <div class="tc">
+        {{if data.isLuck === 1}}
+        <div class="tc dialog-img"><img src="{{data.img}}"></div>
+        <div class="awards-tips">{{data.tips}}</div>
+        <div class="tc btns">
+          <a href="javascript:" data-id="{{data.awardID}}" class="btn" id="J_receive">立即领取</a>
+        </div>
+        {{else}}
+        <div class="tc">未中奖</div>
+        <div class="tc btns">
+          {{if data.times > 0}}
+          <a href="javascript:" class="btn" id="J_goon">确定</a>
+          {{/if}}
+        </div>
+        {{/if}}
       </div>
-      <div>
-        <a href="javascript:void(0);" class="bt-1 pop-sec" id="retHref">喊小伙伴们来抽奖</a>
+    </div>
+    <!-- 弹窗部分结束 -->
+  </div>
+</script>
+
+<!--次数用完-弹窗-->
+<script type="text/html" id="tpl_modal_no">
+  <div class="mod-cover prize_dialog">
+    <div class="dialog-content">
+      <a href="javascript:" class="close-btn">×</a>
+      <h1 class="title-msg">您今天抽奖次数用光了！T^T</h1>
+      <div class="tc" style="padding-top: 30px">
+        <div class="tips-content">
+          明天再来吧！
+        </div>
+        <div class="tc btns">
+          <a href="javascript:" class="btn" id="J_goon">确定</a>
+        </div>
       </div>
-      <p>每日首次分享成功，赠送3次抽奖机会。</p>
-      <div class="blank10"></div>
-      <a href="javascript:void(0);" class="close-box">×</a>
     </div>
   </div>
-  <div class="md-overlay"></div>
-</div>
-<!--中奖提示 ed-->
+</script>
 
-
-<!--活动说明 st-->
-<div class="prize-tips" style="display: none;">
-  <div class="md-modal">
-    <div class="md-content">
-      <div class="blank10"></div>
-      <h4 class="md-title">活动说明</h4>
-      <p>
-        1. 关注教材帮，回复“教材帮”即可免费参加抽奖。
-        <br>
-        <br>
-        2. 活动期间，每位帮友每天均又一次抽奖机会，当日可通过分享朋友圈，增加抽奖机会。
-        <br>
-        <br>
-        3. 中奖后请仔细填写您的个人信息，届时会在微信公众平台上公布获奖名单。信息确认一周后，奖品将以快递形式飞向你！收到奖品请戳图、晒照，放肆炫耀人品。
-        <br>
-        <br>
-        4. 此次活动免费参见，如有陌生电话、短信、冒充天星教育或教材帮编辑部的工作人员向您收取任何费用，请勿相信。
-        <br>
-        <br>
-        5. 本次活动的最终解释权归河南天星教育传媒股份有限公司所有。
-      </p>
-      <div class="blank10"></div>
-      <a href="javascript:void(0);" class="close-box">×</a>
+<!--领取奖品提交成功-弹窗--> <!--一等奖需要填写收货信息-->
+<script type="text/html" id="tpl_modal_get_prize">
+  <div class="mod-cover prize_dialog">
+    <div class="dialog-content">
+      <a href="javascript:" class="close-btn">×</a>
+      <h1 class="title-msg">提交成功！</h1>
+      <div class="tc">
+        <div class="tips-content">
+          感谢您的支持，我们已经收到您提交的信息。<span style="font-size:15px;font-weight:700;">《2018临考预测押题密卷》将于2018年 <b style="color:#fccd02;">5月10日</b>，全国统一发货，</span>请您耐心等待。
+        </div>
+        <div class="tc btns">
+          <a href="javascript:" class="btn" id="J_goon">确定</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="md-overlay"></div>
-</div>
-<!--活动说明 ed-->
+</script>
 
-<!--增加抽奖次数-->
-<div class="prize-tips" style="display: none;">
-  <div class="md-modal">
-    <div class="md-content">
-      <div class="blank10"></div>
-      <h4 class="md-title">增加抽奖次数</h4>
-      <p> 分享朋友圈，增加一次抽奖机会。</p>
-      <div class="blank10"></div>
-      <a href="javascript:void(0);" class="close-box">×</a>
+<!--领取奖品提交成功-弹窗--> <!--一等奖需要填写收货信息-->
+<script type="text/html" id="tpl_modal_form">
+  <div class="mod-cover prize_dialog" style="top:30px;transform: translateY(0)">
+    <div class="dialog-content" style="background-position: center top; background-size: 100%; padding-bottom:0;">
+      <a href="javascript:" class="close-btn">×</a>
+      <h1 class="title-msg">恭喜您！获得价值298元<br>《临考预测押题密卷》一套！</h1>
+      <div class="tc">
+        <div class="tc dialog-img prize-img"><img src="./images/prize/prize_mijuan.png"></div>
+      </div>
+      <div class="form-list">
+        <p class="top-tips">*填写以下信息领取奖品</p>
+        <div class="form-item" style="color:#95908e;">
+          <label>文/理科：</label>
+          <label class="custom-radio"> <input type="radio" name="subject" value="0" checked> <span></span> 文科</label>
+          <label class="custom-radio ml10"> <input type="radio" name="subject" value="1"> <span></span> 理科</label>
+        </div>
+
+        <div class="form-item">
+          <label>
+            <select class="form-control" name="selectAddress">
+              <option>所在地区：</option>
+              <option>河南省</option>
+              <option>北京市</option>
+              <option>天津市</option>
+              <option>上海市</option>
+              <option>重庆市</option>
+              <option>河北省</option>
+              <option>山西省</option>
+              <option>辽宁省</option>
+              <option>吉林省</option>
+              <option>黑龙江省</option>
+              <option>江苏省</option>
+              <option>浙江省</option>
+              <option>安徽省</option>
+              <option>福建省</option>
+              <option>江西省</option>
+              <option>山东省</option>
+              <option>湖北省</option>
+              <option>湖南省</option>
+              <option>广东省</option>
+              <option>海南省</option>
+              <option>贵州省</option>
+              <option>云南省</option>
+              <option>陕西省</option>
+              <option>甘肃省</option>
+              <option>青海省</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-item">
+          <label>
+            <textarea class="form-control" name="address" id="address" rows="2"></textarea>
+          </label>
+        </div>
+
+        <div class="form-item">
+          <label>
+            <input class="form-control" type="text" name="consignee" id="consignee" placeholder="收货人：" />
+          </label>
+        </div>
+
+        <div class="form-item">
+          <label>
+            <input class="form-control" type="tel" name="phoneNumber" id="phone" placeholder="联系电话：" />
+          </label>
+        </div>
+        
+        <div class="form-item tc pt10">
+          <a class="btn" id="J_submit">提交</a>
+        </div>
+      </div>
     </div>
+
+    <!-- 弹窗部分结束 -->
   </div>
-  <div class="md-overlay"></div>
-</div>
-<!--增加抽奖次数end-->
+</script>
 
-<!--=========弹出框end=========-->
-
-<script charset="utf-8" type="text/javascript" src="js/jquery.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-<script charset="utf-8" type="text/javascript" src="js/jQueryRotate.js"></script>
+<script src="./js/jquery-3.0.0.min.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/mock-min.js"></script>
+<script src="./js/mock-api.js"></script>
+<script src="js/jQueryRotate.js"></script>
 <script src="js/index.js"></script>
 <script>
-  var prizeList = ["未中奖", "华为手环一个", "ipadmini一台", "价值50元的天星图书", "iPhone一台", "微信现金红包一个"];
-	$(function () {
-		$.bigWheel.index()
-	})
+  var prizeData = {
+    prizeList: [
+      {
+        name: "500元现金红包",
+        img: "images/prize/500_money.png"
+      },
+      {
+        name: "押题密卷一套",
+        img: "images/prize/mijuan_1.png"
+      },
+      {
+        name: "100元代金券",
+        img: "images/prize/100.png"
+      },
+      {
+        name: "50元代金券",
+        img: "images/prize/50_white.png"
+      },
+      {
+        name: "20元代金券",
+        img: "images/prize/20_red.png"
+      },
+      {
+        name: "10元代金券",
+        img: "images/prize/10_white.png"
+      }
+    ],
+    times:3
+  }
+  $(function () {
+    $.TurningPlate.index(prizeData);
+  })
 </script>
 </body>
 </html>

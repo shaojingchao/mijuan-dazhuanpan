@@ -1,677 +1,374 @@
-@charset "utf-8";
-/* 公共css */
 * {
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: Microsoft yahei;
-  font-size: 14px;
-  margin: 0px;
-  padding: 0px;
-  /*background: #46c4ff;*/
-  background: #ffdd00;
+html {
+  height: 100%;
 }
-
-ol, ul {
+body {
+  font-family: "Microsoft yahei", 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background: #e64102;
+  position: relative;
+}
+ol,
+ul {
   list-style: none;
 }
-
 a {
   color: #f9c67f;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 .left {
   float: left;
 }
-
 .right {
   float: right;
 }
-
-.blank10 {
-  clear: both;
-  height: 10px;
-  overflow: hidden;
-  display: block;
+.ml10 {
+  margin-left: 10px;
 }
-
-.blank20 {
-  clear: both;
-  height: 20px;
-  overflow: hidden;
-  display: block;
+.pt10 {
+  padding-top: 10px;
 }
-
-.blank50 {
-  clear: both;
-  height: 50px;
-  overflow: hidden;
-  display: block;
+.pb10 {
+  padding-bottom: 10px;
 }
-
-.ts_con {
-  background-color: #fff;
-  float: left;
-  font-size: 14px;
-  font-family: 'microsoft yahei';
-}
-
-.none {
-  display: none
-}
-
-/* 头部banner */
-.header {
-  width: 100%;
-  max-width: 1080px;
-  min-width: 320px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.header img {
-  display: block;
-  max-width: 1080px;
-  min-width: 320px;
-  vertical-align: bottom;
-}
-.page-content{
-  background: url(../images/) 0 0 no-repeat;
-  }
-
-/* 转盘抽奖模块 */
-.lottery-box {
+.tc {
   text-align: center;
+}
+.btn {
+  display: inline-block;
+  width: 5em;
+  padding: 0.7em 3em;
+  margin: 0 0.2em;
+  text-align: center;
+  background-color: #ecd10e;
+  color: #f00;
+  line-height: 1;
+  font-size: 15px;
+  border-radius: 50px;
+}
+.red {
+  color: red;
+}
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  background: #fff url(../images/loading.gif) center center / 300px 210px no-repeat;
+  background-color: #ffc322;
+}
+.index-content {
+  background: #e64102 url(../images/top_bg_01.jpg) 50% 0 no-repeat;
+  background-size: 100% auto;
+  padding-top: 169px;
+  padding-top: 45vw;
+}
+/* 大转盘 */
+.lottery-box {
   max-width: 1080px;
   min-width: 320px;
   margin: 0 auto;
   padding: 15px 0 50px 0;
-  background: #ffdd00;
   overflow: hidden;
 }
-
-.time-tips {
-  width: 80%;
-  height: 40px;
-  line-height: 30px;
-  margin: 0 auto;
-  padding: 0px 10px;
-  color: #765b02;
-  font-size: 16px;
-}
-
-/* 大转盘 */
 .lottery-content {
+  text-align: center;
   display: block;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
-
+.lottery-content .today-times {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.lottery-content .today-times span {
+  font-size: 1.1em;
+  color: #fedb03;
+  margin: 0 0.3em;
+}
+.lottery-content .weidian-link-btn {
+  margin: 10px auto 0;
+  display: block;
+  width: 230px;
+  height: 40px;
+  overflow: hidden;
+}
+.lottery-content .weidian-link-btn img {
+  max-width: 100%;
+}
 .lottery-content .turnplate {
   display: block;
   width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   position: relative;
+  padding: 12px;
+  box-sizing: border-box;
+  background: url(../images/wheel_wrap.png) no-repeat 0 0 / 100% 100%;
 }
-
 .lottery-content .turnplate canvas.item {
   display: block;
   width: 100%;
 }
-
 .lottery-content .turnplate img.pointer {
   position: absolute;
   width: 32.5%;
-  height: 32.5%;
   left: 34.1%;
-  top: 31.1%;
+  top: 22.1%;
 }
-
-.l-btn-box {
-  padding: 0px 10px;
-  overflow: hidden;
-}
-
-.l-btn-box a {
-  display: inline-block;
-  width: 45%;
-}
-
-.l-btn-box a img {
-  width: 100%;
-}
-
-.update-tips {
-  width: 88%;
-  padding: 6px;
-  line-height: 20px;
-  margin: 0 auto;
-  color: #333;
-  font-size: 14px;
-  border: 3px dashed #c4ad12;
-  border-radius: 10px;
-}
-
-/* 下载模块 */
-.download-box {
-  width: 100%;
-  text-align: center;
-  max-width: 1080px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 20px 0px;
-  background: #45c4ff;
-  overflow: hidden;
-}
-
-.download_title {
-  background: url(../images/download_title.png) no-repeat;
-  background-size: contain;
-}
-
-.lottery-tips-box {
-  position: relative;
-  width: 90%;
-  height: 50px;
-  margin: 0 auto;
-  color: #765b02;
-  font-size: 16px;
-  border-radius: 6px;
-  background: #fff;
-  border: 3px solid #ff9000;
-}
-
-.lottery-tips-box .title {
-  z-index: 1;
-  display: block;
-  width: 50%;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  height: 35px;
-  line-height: 35px;
+/*活动说明*/
+.activity-desc {
+  margin: 0 15px;
   color: #fff;
-  border-radius: 25px;
-  background: #ff9000;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.lottery-tips-box ul {
-}
-
-.lottery-tips-box ul li {
-  width: 100%;
-  padding-top: 5px;
-  height: 45px;
-  line-height: 45px;
-  float: right;
-  position: relative;
-  text-align: center;
-  font-size: 14px;
-  color: #333;
-  overflow: hidden;
-}
-
-.cheats-title {
-  width: 30%;
-  margin: 0 auto;
-}
-
-.cheats-title img {
-  width: 100%;
-}
-
-.cheats-line {
-  width: 1px;
-  height: 30px;
-  margin: 0 auto;
-  border-left: 2px dashed #333;
-}
-
-.cheats-info {
-  position: relative;
-  width: 88%;
-  padding: 10px;
-  line-height: 20px;
-  margin: 0 auto;
-  color: #333;
-  text-align: left;
-  font-size: 14px;
-  color: #fff;
-  border: 2px dashed #333;
-  border-radius: 10px;
-}
-
-.cheats-info i {
-  position: absolute;
-  top: -30px;
-  left: 0px;
-  display: block;
-  width: 20%;
-}
-
-.cheats-info i img {
-  width: 100%;
-}
-
-/* 中奖记录模块 */
-.record-box {
-  width: 100%;
-  text-align: center;
-  max-width: 1080px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 20px 0px;
-  background: #ffdd00;
-  overflow: hidden;
-}
-
-.record-content {
-  width: 85%;
-  position: relative;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 6px;
-  background: #fff;
-}
-
-.record-content .title {
-  z-index: 10;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  width: 50%;
-  max-width: 200px;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.record-content .title img {
-  width: 100%;
-}
-
-.record-content ul {
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px dashed #fea100;
-  overflow: hidden;
-}
-
-.record-content ul li {
-  margin-top: 10px;
-}
-
-.record-content ul li table {
-  text-align: center;
-  opacity: 0.9;
-  background: #f0f0f0;
-  border-radius: 6px;
-}
-
-.record-content ul li table th {
-  padding: 10px;
-  font-size: 16px;
-  color: #333;
-  font-weight: normal;
-  background: #f0f0f0;
-}
-
-.record-content ul li table td {
-  padding: 10px;
-  font-size: 13px;
-  color: #666;
-  border-bottom: 1px dashed #d1d1d1;
-  background: #fff;
-}
-
-.no-record {
-  padding: 20px 0px;
-  text-align: center;
-  color: #666;
-}
-
-/* 弹出层 */
-.prize-tips {
-  display: block;
-}
-
-.act-info {
-  display: none;
-}
-
-.b-info {
-  display: none;
-}
-
-.red {
-  color: red;
-}
-
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  max-width: 540px;
-  min-width: 280px;
-  height: auto;
-  z-index: 200;
-  color: #333;
-  background: #fffecb;
-  opacity: 0.9;
-  border: 5px solid #f94a2d;
-  border-radius: 10px;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.md-title {
-  padding-bottom: 10px;
-  color: #f00;
-  text-align: center;
-}
-
-.md-modal .md-content {
-  position: relative;
-  padding: 15px;
-}
-
-.md-modal .md-content .dt {
-  text-align: center;
-  line-height: 18px;
-}
-
-.md-modal .md-content .dd {
-  font-size: 12px;
-  margin-top: 10px;
-  line-height: 20px;
-  color: #868686;
-}
-
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  opacity: 0.4;
-  background: #000;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.bt-1 {
-  text-align: center;
-  font-size: 13px;
-  display: inline-block;
-  background: #e85243;
-  height: 35px;
-  line-height: 35px;
-  min-width: 100px;
-  color: #fff;
+  line-height: 2;
+  background-color: #f4631f;
+  padding: 5px 15px 40px;
   border-radius: 3px;
-  -moz-border-radius: 3px;
-  padding: 0 12px 0 12px;
 }
-
-.f1-but {
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.f1-but .bt-1 {
-  border: 0;
-}
-
-.close-box {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 30px;
-  text-align: center;
-  display: inline-block;
-  width: 30px;
+.activity-desc .title {
+  width: 240px;
   height: 30px;
-  line-height: 30px;
-  color: #000;
+  margin: 5px auto;
 }
-
-/*改动*/
-
-.f1-title {
-  padding: 0 10px;
-
+.activity-desc .title img {
+  max-width: 100%;
 }
-
-.f1-title img {
-  width: 100%;
-}
-
-.grid-c2-l {
-  float: left;
-  width: 48%;
-  height: auto;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.grid-c2-r {
-  float: right;
-  width: 48%;
-  margin-bottom: 20px;
-}
-
-.f1-ins {
-  clear: both;
-  padding: 5px 10px;
-  text-align: left;
-  border: 3px dashed #c6af07;
-  border-radius: 10px;
-}
-
 /*中奖记录*/
-.win {
-  padding: 0 10px;
+.prize-list {
+  padding: 50px 15px 100px;
   margin-bottom: 40px;
-  background: #ffdd00;
+  background: #e64102;
 }
-
-.win h1 {
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  height: 78px;
-  background: url(../images/wintitle.png) no-repeat center;
-  background-size: 60%;
+.prize-list h1 {
+  text-align: center;
 }
-
-.win .wintitle1 {
-  background: url(../images/wintitle1.png) no-repeat center;
-  background-size: 60%;
+.prize-list h1 img {
+  max-width: 300px;
 }
-
-.win1 {
-  padding: 0 10px;
-
-  background: #ffdd00;
-}
-
-.win1 h1 {
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  height: 78px;
-  background: url(../images/wintitle.png) no-repeat center;
-  background-size: 60%;
-}
-
-.win1 .wintitle1 {
-  background: url(../images/wintitle1.png) no-repeat center;
-  background-size: 60%;
-}
-
-.mod-table {
-  margin-top: -40px;
-  padding: 10px;
-  background: #fff;
+.prize-table {
+  margin-top: 15px;
+  background: #ee6b02;
   border-radius: 5px;
+  overflow: hidden;
 }
-
-.ul-c2 {
-  width: auto;
-  padding: 20px 5px;
-  border: 2px dashed #ff9900;
-  border-radius: 5px;
+.prize-table li {
+  line-height: 40px;
+  border-top: 1px solid #e64102;
+  color: #fff;
+  overflow: hidden;
 }
-
-.ul-c2 a {
-  color: #CC3333;
+.prize-table li:first-child {
+  border-top: none;
 }
-
-.ul-c2 li {
-  height: 20px;
-  padding: 10px 0;
-  border-bottom: 1px dashed #ddd;
-}
-
-.ul-c2 li select,
-.ul-c2 li textarea,
-.ul-c2 li input[type=text] {
-  width: 100%;
-  padding: 5px 0;
-  border: 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.ul-c2 li p {
-  line-height: 2em;
-}
-
-.ul-c1 li {
-  height: auto;
-  border-bottom: none;
-}
-
-.ul-c2 .title-li {
-  color: #666;
-  font-size: 14px;
-  font-weight: bold;
-  border-bottom: 0;
-  background: #f1f1f1;
-}
-
-.ul-c2 li span {
+.prize-table li span {
+  float: left;
   display: block;
   width: 33.33%;
   text-align: center;
 }
-
-.li-time {
-  float: left;
+.prize-table li span.item-2 {
+  color: rgba(255, 255, 255, 0.7);
 }
-
-.li-spanr {
-  float: right;
-}
-
-.win-img {
-  padding: 20px 0 50px 0;
-  color: #e65038;
-  text-align: center;
-}
-
-.win-img p {
-  font-size: 18px;
-}
-
-.win-img h2 {
-  font-size: 28px;
-  padding-bottom: 20px;
-}
-
-.win-img img {
-  width: 100px;
-  height: auto;
-  box-shadow: 0 0 5px #ccc;
-}
-
-.win-img h4 {
-  font-size: 14px;
-  padding-top: 20px;
-}
-
-.close-box1 {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 30px;
-  text-align: center;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: #000;
-}
-
-.ul-c2 .bgcolor-li {
-  margin-top: 10px;
-  padding-left: 10px;
-  color: #fff;
-  background: #e85243;
-}
-
-.f1-form label {
-  margin-right: 10px;
-}
-
 /*tabs*/
 .footer-box {
   position: fixed;
-  z-index: 100;
+  z-index: 99;
   width: 100%;
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow:0 -2px 3px rgba(0,0,0,.1);
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.1);
 }
-
-.footer-box .current {
-  color: #fff;
-  background: #f27500;
-}
-
-.f1-c2 {
+.footer-box .tab-item {
   width: 50%;
   float: left;
-  font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 16px;
   line-height: 2.4em;
   text-align: center;
-  color: #4c3d00;
-  background: #f7e448;
+  color: #cf2407;
+  background: #e48e08;
   opacity: 0.85;
+}
+.footer-box .tab-item.active {
+  color: #cf2407;
+  background: #fccd02;
+}
+/*弹窗*/
+#layer-box {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.prize_dialog {
+  position: absolute;
+  padding: 30px 0;
+  left: 0;
+  top: 30px;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.prize_dialog .dialog-content {
+  position: relative;
+  padding: 40px 20px 30px;
+  max-width: 280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: url(../prize/images/prizebg.png) no-repeat center #f64603;
+  background-size: cover;
+  border-radius: 3px;
+  /*提示语*/
+}
+.prize_dialog .dialog-content .title-msg {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.prize_dialog .dialog-content .awards-tips {
+  font-size: 12px;
+  text-align: center;
+  color: #ffcb01;
+  padding: 30px 0 10px;
+}
+.prize_dialog .dialog-content .tips-content {
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.prize_dialog .btns {
+  margin-top: 10px;
+  text-align: center;
+}
+.prize_dialog .dialog-img {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  margin: 20px auto;
+}
+.prize_dialog .dialog-img img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.prize_dialog .dialog-img:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 120%;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -10%;
+  background-color: #feffd0;
+}
+.prize_dialog .dialog-img.prize-img:after {
+  display: none;
+}
+.prize_dialog .times-tips {
+  color: #e0d300;
+  text-align: center;
+}
+.prize_dialog .close-btn {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  background: url(../images/close-btn.png) 50% 0.5% 100% no-repeat;
+  font-size: 24px;
+}
+.prize_dialog .close-btn:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-list {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin: 0 -20px;
+}
+.form-list .form-control {
+  font-size: 14px;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f0ebe9;
+  border: 1px solid #f0ebe9;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+.form-list select.form-control {
+  height: 36px;
+  padding-top: 0;
+  padding-bottom: 0.1em;
+}
+.form-list .top-tips {
+  font-size: 12px;
+  color: #bab1b1;
+}
+.form-list .form-item {
+  padding: 5px 0;
+}
+.form-list .custom-radio {
+  display: inline-block;
+  position: relative;
+}
+.form-list .custom-radio input[type=radio] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  margin: 0;
+  height: 0;
+  opacity: 0;
+}
+.form-list .custom-radio span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  vertical-align: -3px;
+  border-radius: 50%;
+  background-color: #f0ebe9;
+  padding: 4px;
+}
+.form-list .custom-radio input[type=radio]:checked + span:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #e64102;
+  border-radius: 50%;
 }
