@@ -236,7 +236,7 @@ a:hover {
   max-width: 280px;
   box-sizing: border-box;
   margin: 0 auto;
-  background: url(../prize/images/prizebg.png) no-repeat center #f64603;
+  background: url(../images/prizebg.png) no-repeat center #f64603;
   background-size: cover;
   border-radius: 3px;
   /*提示语*/

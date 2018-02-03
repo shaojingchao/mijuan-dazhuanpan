@@ -1,1 +1,1 @@
-http-server -p 1011
+browser-sync start --server --files "**/*.css, **/*.html"
